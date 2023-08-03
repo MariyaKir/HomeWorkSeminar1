@@ -61,6 +61,7 @@ while (count <= num)
     count++;
 }
 */
+
 // Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 /*
 int InputNum(string ourNum)
@@ -148,4 +149,75 @@ else
 {
     Console.WriteLine("Сегодня рабочий день.");
 }
+*/
+
+// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+/*
+int InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+bool Palindrom(int num)
+{
+    if (num < 10) return false;
+    else
+    {
+        int cutNum = num;
+        int rev = 0;
+        while (cutNum > 0)
+        {
+            rev *= 10;
+            rev += cutNum % 10;
+            if (rev == 0) return false;
+            cutNum /= 10;
+        }
+        if (rev != num) return false;
+    }
+    return true;
+}
+
+int digital = InputNum("Введите число: ");
+if (Palindrom(digital)) Console.WriteLine("Это палиндром");
+else Console.WriteLine("Это не палиндром");
+*/
+// Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+/*
+double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
+{
+    double X = x2 - x1;
+    double Y = y2 - y1;
+    double Z = z2 - z1;
+    return Math.Round(Math.Sqrt(X * X + Y * Y + Z * Z), 2);
+}
+Console.Write("Input x1: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input y1: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input z1: ");
+double z1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input x2: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input y2: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input z2: ");
+double z2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine(Distance(x1, y1, z1, x2, y2, z2));
+*/
+// Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+/*
+int InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToInt32(Console.ReadLine());;
+}
+
+int number = InputNum("Введите число: ");
+for (int i = 1; i <= number; i++)
+    {
+        int num = i * i * i;
+        Console.Write($"{num} ");
+    }
 */
