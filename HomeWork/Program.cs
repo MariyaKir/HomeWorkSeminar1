@@ -211,7 +211,7 @@ Console.WriteLine(Distance(x1, y1, z1, x2, y2, z2));
 int InputNum(string ourNum)
 {
     Console.Write(ourNum);
-    return Convert.ToInt32(Console.ReadLine());;
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 int number = InputNum("Введите число: ");
@@ -220,4 +220,78 @@ for (int i = 1; i <= number; i++)
         int num = i * i * i;
         Console.Write($"{num} ");
     }
+*/
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+/*
+int InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToInt32(Console.ReadLine());
+}
+int Power(int powNum, int exponent)
+{
+    int power = 1;
+    for (int i = 0; i < exponent; i++)
+        power *= powNum;
+    return power;
+}
+bool PowTrue(int exponent)
+{
+    if (exponent < 0)
+    {
+        Console.WriteLine("Вы ввели показатель меньше нуля.");
+        return false;
+    }
+    return true;
+}
+
+int numPow = InputNum("Введите число: ");
+int exp = InputNum("Введите степень числа: ");
+if (PowTrue(exp))
+    Console.WriteLine($"Число {numPow} в степени {exp} равно {Power(numPow, exp)}");
+*/
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+/*
+int InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToInt32(Console.ReadLine());
+}
+int Sum(int number)
+{
+    int result = 0;
+    for(int i = number; i > 0; i /= 10)
+        result += i % 10;
+    return result;
+}
+int num = InputNum("Введите число: ");
+Console.WriteLine($"Сумма всех цифр в числе равна {Sum(num)}");
+*/
+// Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
+/*
+int InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToInt32(Console.ReadLine());
+}
+int[] Print(int elem)
+{
+    int[] array = new int[elem];
+    for(int i = 0; i < elem; i++)
+        array[i] = InputNum("Введите элемент массива: ");
+    return array;
+}
+void OutArray(int elem, int[] newArr)
+{
+    Console.Write("[");
+    for(int i = 0; i < elem; i++)
+        Console.Write($"{newArr[i]}, ");
+    Console.Write("]");
+}
+int numElem = InputNum("Задайте колличество элементов массива: ");
+int[] inArray = Print(numElem);
+Console.WriteLine("Массив, введенный пользователем: ");
+OutArray(numElem, inArray);
+Console.WriteLine();
 */
