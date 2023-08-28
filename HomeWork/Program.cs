@@ -405,3 +405,52 @@ double[] myArray = CreateRandomArray(m);
 WriteArray(myArray);
 Console.WriteLine(DifferenceMaxMin(myArray));
 */
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+/*
+int InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToInt32(Console.ReadLine());
+}
+void Counting(int m)
+{
+    int count = 0;
+    for (int i = 0; i < m; i++)
+    {
+        Console.Write($"Введите {i + 1}-е число: ");
+        if ((Convert.ToInt32(Console.ReadLine()) > 0))
+            count++;
+    }
+    Console.WriteLine("Положительных чисел: " + count);
+}
+int Input = InputNum("Сколько всего цифр будете вводить? ");
+Counting(Input);
+*/
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых,
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+/*
+double InputNum(string ourNum)
+{
+    Console.Write(ourNum);
+    return Convert.ToDouble(Console.ReadLine());
+}
+void Calculations(double k1, double k2, double b1, double b2)
+{
+    if (k1 - k2 == 0 && b2 -b1 == 0)
+        Console.WriteLine("Прямые совпадают.");
+    else if (k1 - k2 == 0 && b2 - b1 != 0)
+        Console.WriteLine("Прямые параллельны.");
+    else
+    {
+        double x = (b2 - b1) / (k1 -k2);
+        double y = x * k1 + b1;
+        Console.WriteLine($"Прямые пересекаются в точке с координатами ({x}; {y})");
+    }
+}
+double K1 = InputNum("Введите k1: ");
+double B1 = InputNum("Введите b1: ");
+double K2 = InputNum("Введите k2: ");
+double B2 = InputNum("Введите b2: ");
+Calculations(K1, K2, B1, B2);
+*/
