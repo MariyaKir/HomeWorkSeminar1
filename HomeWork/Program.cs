@@ -842,3 +842,52 @@ int[,] myArray = new int[size,size];
 SpiralFillArray(myArray, size);
 PrintArray(myArray, size);
 */
+
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1.
+// Выполнить с помощью рекурсии.
+/*
+void OutputNumbers(int num)
+{
+    if (num > 0)
+    {
+        Console.Write(num + " ");
+        OutputNumbers(num - 1);
+    }
+}
+Console.Write("Input a number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+OutputNumbers(number);
+*/
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+/*
+void SumNatural(int start, int end)
+{
+    int sum = 0;
+    if (start == end) Console.WriteLine($"Сумма всех элементов в промежутке равна {start}");
+    else if (start < end)
+        for (int i = start; i <= end; i++) sum += i;
+    else
+        for (int i = end; i <= start; i++) sum += i;
+    Console.WriteLine($"Сумма всех элементов в промежутке равна {sum}");
+}
+
+Console.Write("Input first number: ");
+int inM = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input second number: ");
+int inN = Convert.ToInt32(Console.ReadLine());
+SumNatural(inM, inN);
+*/
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+/*
+int Funct (int m, int n)
+{
+    if (m == 0) return n + 1;
+    if (n == 0) return Funct(m - 1, 1);
+    return Funct(m - 1, Funct(m, n - 1));
+}
+Console.Write("Input first parameter of function: ");
+int inM = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input second parameter of function: ");
+int inN = Convert.ToInt32(Console.ReadLine());
+Console.Write("Result of function " + Funct(inM, inN));
+*/
